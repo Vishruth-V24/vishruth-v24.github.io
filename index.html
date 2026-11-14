@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vishruth Venugobal | Computer Engineering</title>
+  <meta name="description" content="Vishruth Venugobal, Computer Engineering student at Purdue specializing in semiconductors and microelectronics. RF/analog design, hardware test and validation, software and AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ TOP BAR (datasheet header) ============ -->
+<header class="bar">
+  <div class="bar-inner">
+    <a class="part" href="#top" aria-label="Back to top">
+      <span class="part-no">VV-2028</span>
+      <span class="part-desc">Computer engineering, semiconductors &amp; microelectronics</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#decap">Decap</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO / PAGE 1 ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="rev">Datasheet, rev. Nov 2026</p>
+        <h1>Vishruth<br>Venugobal</h1>
+        <p class="lede">Computer Engineering student at Purdue University, specializing in <strong>semiconductors and microelectronics</strong>. I design and test analog/RF circuits, and I write the software that automates and validates them.</p>
+        <div class="links">
+          <a class="btn btn-primary" href="mailto:venugobalvishruth@gmail.com">Email me</a>
+          <a class="btn" href="https://www.linkedin.com/in/vishruth-venugobal" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        </div>
+      </div>
+
+      <figure class="photo">
+        <div class="photo-frame">
+          <img src="headshot.jpg" alt="Portrait of Vishruth Venugobal" width="400" height="400">
+          <span class="tick tl"></span><span class="tick tr"></span><span class="tick bl"></span><span class="tick br"></span>
+        </div>
+        <figcaption><span>Figure 1.</span> Device photo, actual size may vary.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Datasheet page-1 triad -->
+    <div class="triad">
+      <div class="col">
+        <h2><span class="sec">1</span>Features</h2>
+        <ul class="features">
+          <li>RF/analog design: 5.8&nbsp;GHz low-noise amplifier in progress</li>
+          <li>Hardware test planning, test matrices and pass/fail criteria</li>
+          <li>Python, C, C++ and MATLAB for automation and data analysis</li>
+          <li>Validated software: unit tests, backtests and logging</li>
+          <li>AI-assisted development with Claude Code and Codex</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2><span class="sec">2</span>Applications</h2>
+        <ul class="features">
+          <li>Analog and RF circuit design</li>
+          <li>Silicon validation and debug</li>
+          <li>Hardware test engineering</li>
+          <li>Embedded and firmware systems</li>
+          <li>Hardware for AI workloads</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2><span class="sec">3</span>Description</h2>
+        <p>The VV-2028 is a Purdue Computer Engineering student (B.S. expected Fall 2028) built for the space between circuits and code. Primary focus is semiconductor and microelectronic design, with a minor in Mathematical Economics.</p>
+        <p class="avail">Available for Summer 2027 internships. Based in Bothell, WA and West Lafayette, IN.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWPIECE: DECAP ============ -->
+<section class="decap" id="decap" aria-labelledby="decap-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="decap-title"><span class="sec">4</span>Functional block diagram</h2>
+      <p>Every project is a block on the die. Remove the package lid, then pick a block to look inside.</p>
+    </div>
+
+    <div class="stage" id="stage" data-level="package">
+      <ol class="crumbs" aria-label="Zoom level">
+        <li><button type="button" data-go="package">Package</button></li>
+        <li><button type="button" data-go="die">Die</button></li>
+        <li class="crumb-block" aria-current="page"></li>
+      </ol>
+
+      <div class="stage-body">
+      <div class="viewport" id="viewport">
+        <!-- DIE (sits under the lid) -->
+        <svg class="die" id="die" viewBox="0 0 800 800" role="group" aria-label="Die floorplan with four project blocks">
+          <defs>
+            <pattern id="cells" width="10" height="14" patternUnits="userSpaceOnUse">
+              <rect width="10" height="14" fill="none"/>
+              <rect x="1" y="2" width="8" height="4" class="cell"/>
+              <rect x="1" y="8" width="8" height="4" class="cell alt"/>
+            </pattern>
+            <pattern id="sram" width="12" height="12" patternUnits="userSpaceOnUse">
+              <rect x="3" y="3" width="6" height="6" class="bit"/>
+            </pattern>
+            <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+              <rect x="1" y="1" width="20" height="20" class="tcell"/>
+            </pattern>
+          </defs>
+
+          <!-- die edge, seal ring -->
+          <rect x="110" y="110" width="580" height="580" class="die-body"/>
+          <rect x="122" y="122" width="556" height="556" class="seal"/>
+
+          <!-- bond pads -->
+          <g class="pads" id="pads"></g>
+
+          <!-- top-metal routing -->
+          <g class="routes">
+            <path d="M150 260 H170"/><path d="M150 300 H170"/>
+            <path d="M370 260 H380"/>
+            <path d="M270 350 V360"/><path d="M505 350 V360"/>
+            <path d="M450 495 H460"/><path d="M450 560 H460"/>
+            <path d="M650 260 H630"/><path d="M650 500 H630"/>
+            <path d="M300 650 V630"/><path d="M545 650 V630"/>
+          </g>
+
+          <!-- BLOCK: RF front end -->
+          <g class="block" data-block="rf" tabindex="0" role="button" aria-label="Open RF front end block: 5.8 GHz LNA">
+            <rect x="170" y="170" width="200" height="180" class="blk"/>
+            <g class="spiral" transform="translate(270 248)">
+              <path d="M-48 -48 H48 V48 H-40 V-40 H40 V40 H-32 V-32 H32 V32 H-24 V-24 H24 V24 H-16 V-16 H16 V16 H-8"/>
+            </g>
+            <text x="184" y="194" class="blk-name">RF front end</text>
+            <text x="184" y="336" class="blk-sub">5.8 GHz LNA</text>
+          </g>
+
+          <!-- BLOCK: Test & validation -->
+          <g class="block" data-block="test" tabindex="0" role="button" aria-label="Open test and validation block: rocket propulsion lab">
+            <rect x="380" y="170" width="250" height="180" class="blk"/>
+            <rect x="394" y="206" width="222" height="110" fill="url(#grid)"/>
+            <text x="394" y="194" class="blk-name">Test &amp; validation</text>
+            <text x="394" y="336" class="blk-sub">PURPL</text>
+          </g>
+
+          <!-- BLOCK: Compute core -->
+          <g class="block" data-block="compute" tabindex="0" role="button" aria-label="Open compute core block: automated trading system">
+            <rect x="170" y="360" width="280" height="270" class="blk"/>
+            <rect x="184" y="380" width="252" height="216" fill="url(#cells)"/>
+            <text x="184" y="376" class="blk-name">Compute core</text>
+            <text x="184" y="616" class="blk-sub">Automated trading system</text>
+          </g>
+
+          <!-- BLOCK: Data / ML -->
+          <g class="block" data-block="data" tabindex="0" role="button" aria-label="Open data and machine learning block: social media analysis">
+            <rect x="460" y="360" width="170" height="270" class="blk"/>
+            <rect x="474" y="384" width="142" height="212" fill="url(#sram)"/>
+            <text x="474" y="376" class="blk-name">Data / ML</text>
+            <text x="474" y="616" class="blk-sub">Survey analysis</text>
+          </g>
+
+          <text x="400" y="676" class="die-mark" text-anchor="middle">VV-2028  PURDUE ECE  FALL 2028</text>
+        </svg>
+
+        <!-- PACKAGE LID -->
+        <div class="lid" id="lid">
+          <svg viewBox="0 0 800 800" aria-hidden="true">
+            <g class="pins" id="pins"></g>
+            <rect x="140" y="140" width="520" height="520" rx="10" class="pkg"/>
+            <circle cx="182" cy="182" r="10" class="pin1"/>
+            <text x="400" y="372" class="mark-big" text-anchor="middle">VV-2028</text>
+            <text x="400" y="414" class="mark" text-anchor="middle">SEMICONDUCTOR / MICROELECTRONICS</text>
+            <text x="400" y="446" class="mark dim" text-anchor="middle">PURDUE ECE  2628-B</text>
+          </svg>
+          <button type="button" class="decap-btn" id="decapBtn">Decap the chip</button>
+        </div>
+      </div>
+
+      <!-- BLOCK DETAIL PANEL -->
+      <aside class="detail" id="detail" aria-live="polite" hidden>
+        <button type="button" class="back" id="backBtn">Back to die</button>
+        <div id="detailBody"></div>
+      </aside>
+      </div>
+
+      <p class="hint" id="hint">Tip: use Tab and Enter to move through the blocks.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="sheet" id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="exp-title"><span class="sec">5</span>Experience</h2>
+    </div>
+
+    <article class="entry">
+      <div class="entry-meta">
+        <p class="date">Aug 2026 to present</p>
+        <p class="tag hw">Hardware</p>
+      </div>
+      <div class="entry-main">
+        <h3>Purdue IEEE Electron Devices Society</h3>
+        <p class="role">Member, RFIC / analog IC design</p>
+        <ul>
+          <li>Designing an inductively degenerated common-source low-noise amplifier targeting 5.8&nbsp;GHz.</li>
+          <li>Setting transistor biasing and input/output impedance matching to hit gain and noise-figure goals.</li>
+          <li>Trading off gain, noise figure, linearity, power and stability, and verifying performance across the band in simulation.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-meta">
+        <p class="date">Aug 2025 to Aug 2026</p>
+        <p class="tag hw">Hardware test</p>
+      </div>
+      <div class="entry-main">
+        <h3>Purdue Undergraduate Rocket Propulsion Lab (PURPL)</h3>
+        <p class="role">Technical team member, rotating detonation engine</p>
+        <ul>
+          <li>Used Python and MATLAB to organize test inputs, review run data and compare operating conditions.</li>
+          <li>Built test matrices covering six fields: test points, controlled variables, configuration changes, expected behavior, pass/fail criteria and run status.</li>
+          <li>Cross-checked inputs and outputs to catch inconsistencies before analysis, then turned results into plots and tables for design reviews.</li>
+          <li>Helped standardize a five-stage workflow: planning, variable control, run tracking, data review and documentation.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-meta">
+        <p class="date">Dec 2024 to Jul 2026</p>
+        <p class="tag">Leadership</p>
+      </div>
+      <div class="entry-main">
+        <h3>Flynn Panera</h3>
+        <p class="role">Team lead</p>
+        <ul>
+          <li>Helped take the caf&eacute; from one of the area's lowest-rated locations to one of its highest-rated by improving training, service consistency and customer experience.</li>
+          <li>Trained and onboarded new team members.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="sheet" id="projects" aria-labelledby="proj-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="proj-title"><span class="sec">6</span>Projects</h2>
+    </div>
+
+    <div class="projects">
+      <article class="proj proj-lead">
+        <p class="tag hw">RF / analog</p>
+        <h3>5.8&nbsp;GHz low-noise amplifier</h3>
+        <p>An inductively degenerated common-source LNA, the first amplifier in a wireless receiver. Biasing and matching are tuned for gain and noise figure, then verified in simulation across the band.</p>
+        <p class="stack">LNA design, impedance matching, noise figure, simulation</p>
+        <button type="button" class="proj-open" data-open="rf">See it on the die</button>
+      </article>
+
+      <article class="proj">
+        <p class="tag sw">Software / AI tools</p>
+        <h3>Automated paper trading system</h3>
+        <p>Runs the Silver Bullet strategy at about $10,000 in simulated daily volume, using the Alpaca and Polygon APIs. Strategy logic was validated with backtests before going live in paper trading, and every trade and error is logged.</p>
+        <p class="stack">Python, Alpaca API, Polygon API, backtesting, logging, Claude Code, Codex</p>
+        <button type="button" class="proj-open" data-open="compute">See it on the die</button>
+      </article>
+
+      <article class="proj">
+        <p class="tag sw">Data / ML</p>
+        <h3>Social media data analysis</h3>
+        <p>A machine-learning workflow relating social media behavior to self-efficacy in survey data, with cleaned and validated inputs and interactive charts for comparing groups.</p>
+        <p class="stack">Python, Pandas, NumPy, scikit-learn, Plotly</p>
+        <button type="button" class="proj-open" data-open="data">See it on the die</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS AS ELECTRICAL CHARACTERISTICS ============ -->
+<section class="sheet" id="skills" aria-labelledby="skills-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="skills-title"><span class="sec">7</span>Electrical characteristics</h2>
+      <p>Skills, and where each one has been used.</p>
+    </div>
+    <div class="table-wrap">
+      <table class="spec">
+        <thead>
+          <tr><th scope="col">Parameter</th><th scope="col">Conditions</th><th scope="col">Tested in</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Analog / RF design</th><td>Biasing, impedance matching, gain, noise figure, linearity</td><td>IEEE EDS LNA, ECE 20001</td></tr>
+          <tr><th scope="row">Circuits lab</th><td>Building, measuring and debugging circuits</td><td>ECE 20007</td></tr>
+          <tr><th scope="row">Test &amp; validation</th><td>Test matrices, pass/fail criteria, data cross-checks</td><td>PURPL</td></tr>
+          <tr><th scope="row">C / C++</th><td>Pointers, modular programs, unit tests, GCC, Make, Valgrind</td><td>ECE 264</td></tr>
+          <tr><th scope="row">Python</th><td>Automation, API integration, backtesting, logging</td><td>Trading system, PURPL</td></tr>
+          <tr><th scope="row">MATLAB</th><td>Data review, condition comparison, plotting</td><td>PURPL, ENGR coursework</td></tr>
+          <tr><th scope="row">Data / ML</th><td>Pandas, NumPy, scikit-learn, Plotly</td><td>Survey analysis</td></tr>
+          <tr><th scope="row">Tools</th><td>Git, Linux, VS Code, Claude Code, Codex, Excel</td><td>Everywhere</td></tr>
+          <tr><th scope="row">Languages</th><td>English, Tamil (native), Japanese (limited working)</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="contact-title"><span class="sec">8</span>Ordering information</h2>
+      <p>Hiring for Summer 2027? Here's how to reach me.</p>
+    </div>
+    <div class="order">
+      <a class="order-row" href="mailto:venugobalvishruth@gmail.com">
+        <span class="o-key">Email</span><span class="o-val">venugobalvishruth@gmail.com</span>
+      </a>
+      <a class="order-row" href="https://www.linkedin.com/in/vishruth-venugobal" target="_blank" rel="noopener">
+        <span class="o-key">LinkedIn</span><span class="o-val">in/vishruth-venugobal</span>
+      </a>
+      <a class="order-row" href="resume.pdf" target="_blank" rel="noopener">
+        <span class="o-key">Resume</span><span class="o-val">Download PDF</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>Vishruth Venugobal, Purdue University, B.S. Computer Engineering, expected Fall 2028.</p>
+    <p>Hand-built in HTML, CSS and JavaScript.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
