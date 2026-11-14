@@ -89,8 +89,50 @@
         </ul>`,
       fig: `<figure class="fig">${schematic}<figcaption><b>Figure 2.</b> Simplified topology. The dashed line traces the signal path.</figcaption></figure>`
     },
+    dice: {
+      name: "Timing & logic",
+      kind: "ECE 20007 mini-project, Nov 2026",
+      title: "555 timer electronic dice",
+      body: `<p>Press the button and six LEDs spin fast enough to blur, then land on a random face about three seconds after release.</p>
+        <ul>
+          <li>Monostable 555 roll timer (t = 1.1RC = 2.97&nbsp;s) holds the clock out of reset while the die spins.</li>
+          <li>Astable 555 clock steps a CD74HC4017 decade counter; wiring Q6 back to reset limits it to six faces.</li>
+          <li>Sized every RC network by hand, simulated in LTspice, then verified each stage on an oscilloscope.</li>
+          <li>Debugged a clock that wouldn't oscillate by measuring pin voltages one block at a time, and flagged a 2.98&nbsp;V clock high level below the 4017's 3.5&nbsp;V input spec as a noise-margin risk.</li>
+        </ul>
+        <p><a class="proj-open" href="https://drive.google.com/file/d/1I2v0BolJJitAPWBkBIefgOz70AKBWhkS/view?usp=sharing" target="_blank" rel="noopener">Watch the demo video</a></p>`,
+      fig: `<figure class="fig"><svg class="sch" viewBox="0 0 360 236" role="img" aria-label="Block diagram: button press triggers a 555 one-shot roll timer, which releases the reset on a 555 astable clock, which steps a CD74HC4017 counter driving six LEDs">
+          <text x="10" y="14" font-size="12">button press</text>
+          <line x1="85" y1="18" x2="85" y2="30" class="acc"/>
+          <rect x="10" y="30" width="150" height="54" fill="#141B2C" stroke="#45557A" stroke-width="2"/>
+          <text x="85" y="53" text-anchor="middle" font-size="13" style="fill:#E4E8F0">555 one-shot</text>
+          <text x="85" y="72" text-anchor="middle" font-size="11">roll timer, 2.97 s</text>
+          <line x1="160" y1="57" x2="200" y2="57" class="acc"/>
+          <text x="180" y="49" text-anchor="middle" font-size="11">RST</text>
+          <rect x="200" y="30" width="150" height="54" fill="#141B2C" stroke="#45557A" stroke-width="2"/>
+          <text x="275" y="53" text-anchor="middle" font-size="13" style="fill:#E4E8F0">555 astable</text>
+          <text x="275" y="72" text-anchor="middle" font-size="11">clock, ~40 Hz</text>
+          <line x1="275" y1="84" x2="275" y2="110" class="acc"/>
+          <text x="283" y="101" font-size="11">CLK</text>
+          <rect x="200" y="110" width="150" height="54" fill="#141B2C" stroke="#D08C4E" stroke-width="2"/>
+          <text x="275" y="133" text-anchor="middle" font-size="13" style="fill:#E4E8F0">CD74HC4017</text>
+          <text x="275" y="152" text-anchor="middle" font-size="11">Q6 &#8594; RST: 6 faces</text>
+          <polyline points="200,137 30,137 30,178" class="acc"/>
+          <line x1="30" y1="178" x2="330" y2="178"/>
+          ${[0,1,2,3,4,5].map(i=>`<line x1="${30+i*60}" y1="178" x2="${30+i*60}" y2="188"/><circle cx="${30+i*60}" cy="198" r="10" fill="${i===3?'#E58C7A':'#2A3550'}" stroke="#45557A"/><text x="${30+i*60}" y="228" text-anchor="middle" font-size="11">${i+1}</text>`).join("")}
+        </svg>
+        <table class="matrix" style="margin-top:10px">
+          <thead><tr><th>Measurement</th><th>Calc.</th><th>Measured</th><th>Error</th></tr></thead>
+          <tbody>
+            <tr><td>Roll pulse</td><td>2.97 s</td><td>2.99 s</td><td class="pass">+0.6%</td></tr>
+            <tr><td>One-shot (CP1)</td><td>2.97 s</td><td>2.931 s</td><td class="pass">&minus;1.3%</td></tr>
+            <tr><td>Astable duty</td><td>59.5%</td><td>60.2%</td><td class="pass">+1.2%</td></tr>
+            <tr><td>Q0 duty (1/6)</td><td>16.7%</td><td>16.2%</td><td class="pass">&minus;2.8%</td></tr>
+          </tbody></table>
+        <p class="cap"><b>Figure 3.</b> Block diagram and measured results from the lab write-up.</p></figure>`
+    },
     test: {
-      name: "Test & validation",
+      name: "Validation",
       kind: "Purdue Rocket Propulsion Lab, Aug 2025 to Aug 2026",
       title: "Hardware test campaigns",
       body: `<p>Supported the rotating detonation engine team by turning test runs into data the team could trust.</p>
@@ -107,7 +149,7 @@
             <tr><td>TP-02</td><td>Ctrl A</td><td>Mod 1</td><td>In range</td><td class="fail">Fail</td><td>Re-run</td></tr>
             <tr><td>TP-03</td><td>Ctrl B</td><td>Mod 1</td><td>In range</td><td class="pend">Pending</td><td>Queued</td></tr>
           </tbody></table>
-          <p class="cap"><b>Figure 3.</b> The six-field matrix layout. Values are illustrative.</p></figure>`
+          <p class="cap"><b>Figure 4.</b> The six-field matrix layout. Values are illustrative.</p></figure>`
     },
     compute: {
       name: "Compute core",
@@ -121,7 +163,7 @@
           <li>Built with Claude Code and Codex, reviewing and testing the AI-generated code before using it.</li>
         </ul>`,
       fig: `<figure class="fig"><div class="log" id="log" aria-hidden="true"></div>
-          <p class="cap"><b>Figure 4.</b> Log output format. Entries are illustrative.</p></figure>`
+          <p class="cap"><b>Figure 5.</b> Log output format. Entries are illustrative.</p></figure>`
     },
     data: {
       name: "Data / ML",
@@ -138,7 +180,7 @@
             <rect x="60" y="${8+i*48}" width="220" height="32" fill="#141B2C" stroke="${i===3?'#D08C4E':'#45557A'}" stroke-width="2"/>
             <text x="170" y="${29+i*48}" text-anchor="middle" style="fill:#E4E8F0">${t.replace("&","&amp;")}</text>
             ${i<4?`<line x1="170" y1="${40+i*48}" x2="170" y2="${56+i*48}" class="acc"/>`:""}`).join("")}
-        </svg><figcaption><b>Figure 5.</b> Analysis pipeline.</figcaption></figure>`
+        </svg><figcaption><b>Figure 6.</b> Analysis pipeline.</figcaption></figure>`
     }
   };
 

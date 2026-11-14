@@ -64,6 +64,7 @@
         <h2><span class="sec">1</span>Features</h2>
         <ul class="features">
           <li>RF/analog design: 5.8&nbsp;GHz low-noise amplifier in progress</li>
+          <li>Built and measured a 555-timer electronic dice on the bench</li>
           <li>Hardware test planning, test matrices and pass/fail criteria</li>
           <li>Python, C, C++ and MATLAB for automation and data analysis</li>
           <li>Validated software: unit tests, backtests and logging</li>
@@ -107,7 +108,7 @@
       <div class="stage-body">
       <div class="viewport" id="viewport">
         <!-- DIE (sits under the lid) -->
-        <svg class="die" id="die" viewBox="0 0 800 800" role="group" aria-label="Die floorplan with four project blocks">
+        <svg class="die" id="die" viewBox="0 0 800 800" role="group" aria-label="Die floorplan with five project blocks">
           <defs>
             <pattern id="cells" width="10" height="14" patternUnits="userSpaceOnUse">
               <rect width="10" height="14" fill="none"/>
@@ -131,46 +132,61 @@
 
           <!-- top-metal routing -->
           <g class="routes">
-            <path d="M150 260 H170"/><path d="M150 300 H170"/>
+            <path d="M150 220 H170"/><path d="M150 300 H170"/>
             <path d="M370 260 H380"/>
-            <path d="M270 350 V360"/><path d="M505 350 V360"/>
-            <path d="M450 495 H460"/><path d="M450 560 H460"/>
-            <path d="M650 260 H630"/><path d="M650 500 H630"/>
-            <path d="M300 650 V630"/><path d="M545 650 V630"/>
+            <path d="M650 220 H630"/><path d="M650 300 H630"/>
+            <path d="M250 350 V360"/><path d="M420 350 V360"/><path d="M570 350 V360"/>
+            <path d="M150 500 H170"/><path d="M650 500 H630"/>
+            <path d="M250 650 V630"/><path d="M420 650 V630"/><path d="M570 650 V630"/>
           </g>
 
           <!-- BLOCK: RF front end -->
           <g class="block" data-block="rf" tabindex="0" role="button" aria-label="Open RF front end block: 5.8 GHz LNA">
             <rect x="170" y="170" width="200" height="180" class="blk"/>
-            <g class="spiral" transform="translate(270 248)">
-              <path d="M-48 -48 H48 V48 H-40 V-40 H40 V40 H-32 V-32 H32 V32 H-24 V-24 H24 V24 H-16 V-16 H16 V16 H-8"/>
+            <g class="spiral" transform="translate(270 256)">
+              <path d="M-44 -44 H44 V44 H-36 V-36 H36 V36 H-28 V-28 H28 V28 H-20 V-20 H20 V20 H-12 V-12 H12 V12 H-4"/>
             </g>
             <text x="184" y="194" class="blk-name">RF front end</text>
             <text x="184" y="336" class="blk-sub">5.8 GHz LNA</text>
           </g>
 
-          <!-- BLOCK: Test & validation -->
-          <g class="block" data-block="test" tabindex="0" role="button" aria-label="Open test and validation block: rocket propulsion lab">
+          <!-- BLOCK: Timing & logic (555 dice) -->
+          <g class="block" data-block="dice" tabindex="0" role="button" aria-label="Open timing and logic block: 555 timer electronic dice">
             <rect x="380" y="170" width="250" height="180" class="blk"/>
-            <rect x="394" y="206" width="222" height="110" fill="url(#grid)"/>
-            <text x="394" y="194" class="blk-name">Test &amp; validation</text>
-            <text x="394" y="336" class="blk-sub">PURPL</text>
+            <g class="wave">
+              <path class="sq" d="M396 300 H420 V232 H452 V300 H476 V232 H508 V300 H532 V232 H564 V300 H588 V232 H614"/>
+              <path class="ramp" d="M396 288 Q408 252 420 248 L420 288 Q440 252 452 248"/>
+              <g class="faces">
+                <circle cx="404" cy="214" r="5"/><circle cx="420" cy="214" r="5"/><circle cx="436" cy="214" r="5"/>
+                <circle cx="452" cy="214" r="5" class="on"/><circle cx="468" cy="214" r="5"/><circle cx="484" cy="214" r="5"/>
+              </g>
+            </g>
+            <text x="394" y="194" class="blk-name">Timing &amp; logic</text>
+            <text x="394" y="336" class="blk-sub">555 electronic dice</text>
+          </g>
+
+          <!-- BLOCK: Validation -->
+          <g class="block" data-block="test" tabindex="0" role="button" aria-label="Open validation block: rocket propulsion lab test campaigns">
+            <rect x="170" y="360" width="160" height="270" class="blk"/>
+            <rect x="184" y="390" width="132" height="200" fill="url(#grid)"/>
+            <text x="184" y="384" class="blk-name">Validation</text>
+            <text x="184" y="616" class="blk-sub">PURPL</text>
           </g>
 
           <!-- BLOCK: Compute core -->
           <g class="block" data-block="compute" tabindex="0" role="button" aria-label="Open compute core block: automated trading system">
-            <rect x="170" y="360" width="280" height="270" class="blk"/>
-            <rect x="184" y="380" width="252" height="216" fill="url(#cells)"/>
-            <text x="184" y="376" class="blk-name">Compute core</text>
-            <text x="184" y="616" class="blk-sub">Automated trading system</text>
+            <rect x="340" y="360" width="160" height="270" class="blk"/>
+            <rect x="354" y="390" width="132" height="200" fill="url(#cells)"/>
+            <text x="354" y="384" class="blk-name">Compute core</text>
+            <text x="354" y="616" class="blk-sub">Trading system</text>
           </g>
 
           <!-- BLOCK: Data / ML -->
           <g class="block" data-block="data" tabindex="0" role="button" aria-label="Open data and machine learning block: social media analysis">
-            <rect x="460" y="360" width="170" height="270" class="blk"/>
-            <rect x="474" y="384" width="142" height="212" fill="url(#sram)"/>
-            <text x="474" y="376" class="blk-name">Data / ML</text>
-            <text x="474" y="616" class="blk-sub">Survey analysis</text>
+            <rect x="510" y="360" width="120" height="270" class="blk"/>
+            <rect x="522" y="390" width="96" height="200" fill="url(#sram)"/>
+            <text x="522" y="384" class="blk-name">Data / ML</text>
+            <text x="522" y="616" class="blk-sub">Survey</text>
           </g>
 
           <text x="400" y="676" class="die-mark" text-anchor="middle">VV-2028  PURDUE ECE  FALL 2028</text>
@@ -276,6 +292,17 @@
       </article>
 
       <article class="proj">
+        <p class="tag hw">Analog / digital timing</p>
+        <h3>555 timer electronic dice</h3>
+        <p>A push-button die built from two NE555 timers and a CD74HC4017 decade counter. A monostable roll timer gates an astable clock, and Q6-to-reset feedback limits the counter to six faces. Every stage was verified on an oscilloscope against hand calculations.</p>
+        <p class="stack">NE555, CD74HC4017, RC timing design, LTspice, oscilloscope, multimeter</p>
+        <div class="proj-actions">
+          <button type="button" class="proj-open" data-open="dice">See it on the die</button>
+          <a class="proj-open" href="https://drive.google.com/file/d/1I2v0BolJJitAPWBkBIefgOz70AKBWhkS/view?usp=sharing" target="_blank" rel="noopener">Watch the demo</a>
+        </div>
+      </article>
+
+      <article class="proj">
         <p class="tag sw">Software / AI tools</p>
         <h3>Automated paper trading system</h3>
         <p>Runs the Silver Bullet strategy at about $10,000 in simulated daily volume, using the Alpaca and Polygon APIs. Strategy logic was validated with backtests before going live in paper trading, and every trade and error is logged.</p>
@@ -308,7 +335,8 @@
         </thead>
         <tbody>
           <tr><th scope="row">Analog / RF design</th><td>Biasing, impedance matching, gain, noise figure, linearity</td><td>IEEE EDS LNA, ECE 20001</td></tr>
-          <tr><th scope="row">Circuits lab</th><td>Building, measuring and debugging circuits</td><td>ECE 20007</td></tr>
+          <tr><th scope="row">Circuits lab</th><td>Breadboard prototyping, oscilloscope and multimeter measurement, LTspice simulation</td><td>ECE 20007, 555 dice</td></tr>
+          <tr><th scope="row">Timing &amp; digital logic</th><td>555 monostable/astable design, RC timing, decade counters, logic levels</td><td>555 dice</td></tr>
           <tr><th scope="row">Test &amp; validation</th><td>Test matrices, pass/fail criteria, data cross-checks</td><td>PURPL</td></tr>
           <tr><th scope="row">C / C++</th><td>Pointers, modular programs, unit tests, GCC, Make, Valgrind</td><td>ECE 264</td></tr>
           <tr><th scope="row">Python</th><td>Automation, API integration, backtesting, logging</td><td>Trading system, PURPL</td></tr>
